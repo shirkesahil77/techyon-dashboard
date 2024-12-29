@@ -1,0 +1,166 @@
+// Common styles for the Techyon Dashboard
+
+// Variables
+$primary-color: #3498db;
+$secondary-color: #2ecc71;
+$font-family: 'Arial, sans-serif';
+
+// Mixins
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+// Base styles
+body {
+    font-family: $font-family;
+    margin: 0;
+    padding: 0;
+    // background-color: #f5f5f5;
+    color: #333;
+}
+
+a {
+    color: $primary-color;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+// Utility classes
+.text-center {
+    text-align: center;
+}
+
+.mt-1 {
+    margin-top: 1rem;
+}
+
+.mb-1 {
+    margin-bottom: 1rem;
+}
+
+.p-1 {
+    padding: 1rem;
+}
+
+.section {
+    // Define styles for the section class
+    padding: 1rem;
+    background-color: #fff;
+    // border: 1px solid #ddd;
+    // border-radius: 4px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1rem;
+}
+
+.projects {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+    // background-color: #f9f9f9;
+    // border: 1px solid #ddd;
+    // border-radius: 4px;
+}
+
+.button {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    color: #fff;
+    background-color: $primary-color;
+    // border: none;
+    // border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+
+    &:hover {
+        background-color: darken($primary-color, 10%);
+    }
+
+    &:disabled {
+        background-color: #ccc;
+        cursor: not-allowed;
+    }
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    gap: 20px;
+    // background-color: #2c3e50;
+    color: #2c3e50;
+}
+
+.shadow {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+}
+
+.progress-bar-container {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.progress-bar {
+    flex: 1;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    height: 1.5rem; // Ensure the height is set
+}
+
+.progress {
+    height: 100%;
+    background-color: $secondary-color;
+    text-align: center;
+    color: #000;
+    line-height: 1.5rem;
+    border-radius: 4px;
+}
+
+.progress-text {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+}
+
+.progress-start,
+.progress-end {
+    font-size: 0.875rem;
+    color: #666;
+}
+
+.members {
+    display: flex;
+    align-items: center;
+
+    img {
+        height: 30px;
+        border-radius: 50%;
+        border: 2px solid #fff;
+        margin-left: -10px; // Overlap images
+        &:first-child {
+            margin-left: 0; // No margin for the first image
+        }
+        background-color: #666;
+    }
+
+    .extra-members {
+        font-size: 0.875rem;
+        color: #666;
+    }
+}

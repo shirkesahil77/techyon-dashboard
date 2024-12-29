@@ -1,0 +1,57 @@
+.sidebar {
+  width: 50px;
+  transition: width 0.3s;
+  background: var(--Var-prime-blue, #2D446E);
+  color: white;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &.closed {
+    width: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hamburger {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 32px;
+    color: white;
+    margin: 10px 0;
+  }
+
+  h2 {
+    margin: 10px 0;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0;
+
+    svg {
+      font-size: 20px;
+    }
+  }
+
+  .separator {
+    width: 80%;
+    border: 0;
+    border-top: 1px solid #fff;
+    margin: 10px 0;
+  }
+}

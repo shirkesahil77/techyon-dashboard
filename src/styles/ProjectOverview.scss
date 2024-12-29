@@ -1,0 +1,30 @@
+@import './common.scss';
+
+.project-overview {
+  @extend .shadow;
+
+  .view-toggle {
+    @extend .view-toggle;
+  }
+
+  .header {
+    @extend .header;
+  }
+
+  .projects-section, .tasks-section {
+    @extend .section;
+  }
+
+  .projects-section {
+    @extend .projects;
+  }
+
+  .action-button {
+    @extend .button;
+  }
+
+  .some-class {
+    @extend .section !optional;
+    // ...other styles...
+  }
+}

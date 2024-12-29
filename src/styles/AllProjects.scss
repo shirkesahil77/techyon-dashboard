@@ -1,0 +1,22 @@
+@import './common.scss';
+
+.all-projects {
+    // @extend .shadow;
+
+    .header {
+        @extend .header;
+        justify-content: space-between;
+    }
+
+    .view-toggle {
+        @extend .view-toggle;
+    }
+
+    .project-grid {
+        @extend .grid;
+    }
+
+    .view-more {
+        @extend .view-more;
+    }
+}

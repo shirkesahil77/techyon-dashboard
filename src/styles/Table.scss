@@ -1,0 +1,85 @@
+@import './common.scss';
+
+.task-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 8px;
+    overflow: hidden;
+
+    th, td {
+        padding: 0.5rem;
+        border: 1px solid #ddd;
+        text-align: left;
+    }
+
+    th {
+        background-color: #f5f5f5;
+    }
+
+    tr {
+        &:nth-child(even) {
+            background-color: #fff; // Remove striped rows
+        }
+    }
+
+    .progress-bar-container {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .progress-bar {
+        flex: 1;
+        background-color: #e0e0e0;
+        border-radius: 4px;
+        overflow: hidden;
+        position: relative;
+        height: 1.5rem; // Ensure the height is set
+    }
+
+    .progress {
+        height: 100%;
+        background-color: $primary-color;
+        text-align: center;
+        color: #fff;
+        line-height: 1.5rem;
+        border-radius: 4px;
+    }
+
+    .progress-text {
+        position: absolute;
+        width: 100%;
+        left: 0;
+        top: 0;
+    }
+
+    .progress-start,
+    .progress-end {
+        font-size: 0.875rem;
+        color: #666;
+    }
+
+    .status {
+        padding: 5px 10px;
+        border-radius: 4px;
+        display: inline-block;
+        text-align: center;
+    }
+
+    .status-cell {
+        background-color: gray;
+    }
+
+    .owner {
+        display: flex;
+        align-items: center;
+
+        img {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            margin-right: 5px;
+        }
+    }
+}

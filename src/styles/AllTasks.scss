@@ -1,0 +1,23 @@
+@import './common.scss';
+
+.all-tasks {
+    // @extend .shadow;
+
+    .header {
+        @extend .header;
+        justify-content: space-between;
+    }
+
+    .view-toggle {
+        @extend .view-toggle;
+    }
+
+    .task-grid {
+        @extend .grid;
+        padding: 1rem;
+    }
+
+    .view-more {
+        @extend .view-more;
+    }
+}
